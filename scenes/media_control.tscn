@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cpuavx2at3tam"]
+
+[node name="MediaControl" type="Control"]
+layout_mode = 3
+anchor_right = 0.5
+anchor_bottom = 0.286
+offset_bottom = -0.200012
