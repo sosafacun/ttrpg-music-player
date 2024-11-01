@@ -1,7 +1,60 @@
-[gd_scene format=3 uid="uid://cpuavx2at3tam"]
+[gd_scene load_steps=2 format=3 uid="uid://cpuavx2at3tam"]
+
+[ext_resource type="Script" path="res://scenes/media_control.gd" id="1_cluhk"]
 
 [node name="MediaControl" type="Control"]
 layout_mode = 3
 anchor_right = 0.5
-anchor_bottom = 0.286
-offset_bottom = -0.200012
+anchor_bottom = 0.057
+offset_bottom = 0.0999985
+script = ExtResource("1_cluhk")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.172833, 0.172833, 0.172833, 0.184314)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -296.0
+offset_bottom = -9.0
+
+[node name="Buttons" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.667
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.200043
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Stop" type="Button" parent="Buttons"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -2.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 536.0
+offset_right = -18.7
+offset_bottom = -9.0
+text = "Stop"
+
+[node name="PlayPause" type="Button" parent="Buttons"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -2.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 416.0
+offset_right = -82.0
+offset_bottom = -9.0
+text = "Play / Pause"
