@@ -1,0 +1,212 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3fcyal3qffms"]
+
+[sub_resource type="FontFile" id="FontFile_gpyf4"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
+[sub_resource type="Theme" id="Theme_e1o2a"]
+default_font = SubResource("FontFile_gpyf4")
+
+[node name="GUI" type="Node"]
+
+[node name="Panels" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AmbiancePanel" type="Control" parent="Panels"]
+layout_mode = 1
+anchor_right = 0.427
+anchor_bottom = 0.697
+offset_right = 87.6
+offset_bottom = 12.1
+
+[node name="AmbienceBg" type="Control" parent="Panels/AmbiancePanel"]
+layout_mode = 1
+anchor_right = 1.002
+anchor_bottom = 1.4
+offset_right = -0.200073
+offset_bottom = -6.10352e-05
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="ColorRect3" type="ColorRect" parent="Panels/AmbiancePanel/AmbienceBg"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.098
+offset_left = -24.0
+offset_top = 464.0
+offset_bottom = 635.4
+color = Color(0.288434, 0.592337, 0.442937, 1)
+metadata/_edit_lock_ = true
+
+[node name="ColorRect4" type="ColorRect" parent="Panels/AmbiancePanel/AmbienceBg"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.985
+anchor_bottom = 0.759
+offset_top = 512.0
+offset_right = 0.0149536
+offset_bottom = 0.699951
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0967558, 0.242221, 0.172376, 1)
+metadata/_edit_lock_ = true
+
+[node name="PlayerTag" type="Label" parent="Panels/AmbiancePanel/AmbienceBg/ColorRect4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.002
+anchor_bottom = 1.0
+offset_top = -4.0
+offset_right = -0.184082
+theme = SubResource("Theme_e1o2a")
+text = "Player"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="Panels/AmbiancePanel/AmbienceBg"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1.0
+offset_bottom = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0967558, 0.242221, 0.172376, 1)
+metadata/_edit_lock_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="Panels/AmbiancePanel/AmbienceBg"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.011
+anchor_right = 1.0
+anchor_bottom = 0.069
+offset_top = 0.299999
+offset_right = 1.0
+offset_bottom = -0.300003
+color = Color(0.288434, 0.592337, 0.442937, 1)
+metadata/_edit_lock_ = true
+
+[node name="AmbianceTag" type="Label" parent="Panels/AmbiancePanel/AmbienceBg"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.002
+anchor_bottom = 0.069
+offset_left = -1.0
+offset_top = 8.0
+offset_right = -1.20203
+offset_bottom = -0.300003
+theme = SubResource("Theme_e1o2a")
+text = "Ambiance"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="MusicPanel" type="Control" parent="Panels"]
+layout_mode = 1
+anchor_left = 0.5
+anchor_top = -0.001
+anchor_right = 1.0
+anchor_bottom = 0.714
+offset_top = 0.7
+offset_bottom = 0.199982
+
+[node name="MusicBg" type="Control" parent="Panels/MusicPanel"]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 1.4
+offset_left = -8.0
+offset_bottom = -12.0001
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="ColorRect" type="ColorRect" parent="Panels/MusicPanel/MusicBg"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.002
+anchor_right = 1.002
+anchor_bottom = 0.733
+offset_left = -0.2
+offset_right = -0.200073
+offset_bottom = -4.30402
+color = Color(0.522351, 0.353079, 0.240272, 1)
+metadata/_edit_lock_ = true
+
+[node name="ColorRect3" type="ColorRect" parent="Panels/MusicPanel/MusicBg"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.017
+offset_top = 500.0
+offset_bottom = 1.30396
+color = Color(0.233715, 0.146442, 0.0879595, 1)
+metadata/_edit_lock_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="Panels/MusicPanel/MusicBg"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.011
+anchor_right = 1.002
+anchor_bottom = 0.069
+offset_left = 1.0
+offset_top = 0.431999
+offset_right = 0.783936
+offset_bottom = 0.527996
+color = Color(0.233715, 0.146442, 0.0879595, 1)
+metadata/_edit_lock_ = true
+
+[node name="ColorRect4" type="ColorRect" parent="Panels/MusicPanel/MusicBg"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.003
+anchor_top = 0.738
+anchor_right = 1.0
+anchor_bottom = 0.773
+offset_left = -1.8
+offset_top = 4.25598
+offset_bottom = 0.175964
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.521569, 0.352941, 0.239216, 1)
+metadata/_edit_lock_ = true
+
+[node name="PlayerTag" type="Label" parent="Panels/MusicPanel/MusicBg/ColorRect4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.002
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.2
+offset_top = -4.0
+offset_right = 1.0
+offset_bottom = -0.999954
+theme = SubResource("Theme_e1o2a")
+text = "Player"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="MusicTag" type="Label" parent="Panels/MusicPanel/MusicBg"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.003
+anchor_top = 0.011
+anchor_right = 1.0
+anchor_bottom = 0.069
+offset_left = 0.2
+offset_top = 0.299999
+offset_bottom = -0.300003
+text = "Music"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
