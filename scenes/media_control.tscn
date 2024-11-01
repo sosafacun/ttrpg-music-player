@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://cpuavx2at3tam"]
+[gd_scene load_steps=5 format=3 uid="uid://cpuavx2at3tam"]
 
 [ext_resource type="Script" path="res://scenes/media_control.gd" id="1_cluhk"]
+[ext_resource type="Texture2D" uid="uid://ooj5stgql36c" path="res://icons/play.svg" id="2_1eq6l"]
+[ext_resource type="Texture2D" uid="uid://dnlvcqw2humm2" path="res://icons/stop.svg" id="2_wrikh"]
+[ext_resource type="Texture2D" uid="uid://do4wry8k2egx0" path="res://icons/pause.svg" id="3_eoo52"]
 
 [node name="MediaControl" type="Control"]
 layout_mode = 3
@@ -11,12 +14,9 @@ script = ExtResource("1_cluhk")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.172833, 0.172833, 0.172833, 0.184314)
+offset_right = 600.0
+offset_bottom = 40.0
+color = Color(0.172549, 0.172549, 0.172549, 0.568627)
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -25,15 +25,16 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 8.0
 offset_top = 8.0
-offset_right = -296.0
+offset_right = -300.0
 offset_bottom = -9.0
+text = "This is a song title. Try to imagine it."
+metadata/_edit_lock_ = true
 
 [node name="Buttons" type="Control" parent="."]
 layout_mode = 1
-anchor_left = 0.667
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -0.200043
+offset_left = 400.0
+offset_right = 600.0
+offset_bottom = 40.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -41,20 +42,48 @@ grow_vertical = 2
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -2.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 536.0
-offset_right = -18.7
-offset_bottom = -9.0
-text = "Stop"
+anchor_right = -2.0
+offset_left = 560.0
+offset_top = 4.0
+offset_right = 592.0
+offset_bottom = 36.0
+
+[node name="Stop2" type="Sprite2D" parent="Buttons/Stop"]
+position = Vector2(16, 16)
+scale = Vector2(0.0261719, 0.0261719)
+texture = ExtResource("2_wrikh")
 
 [node name="PlayPause" type="Button" parent="Buttons"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -2.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 416.0
-offset_right = -82.0
-offset_bottom = -9.0
-text = "Play / Pause"
+anchor_right = -2.0
+offset_left = 304.0
+offset_top = 4.0
+offset_right = 336.0
+offset_bottom = 36.0
+toggle_mode = true
+metadata/_edit_group_ = true
+
+[node name="PlayIcon" type="Sprite2D" parent="Buttons/PlayPause"]
+position = Vector2(16, 16)
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("2_1eq6l")
+
+[node name="PauseIcon" type="Sprite2D" parent="Buttons/PlayPause"]
+visible = false
+position = Vector2(16, 16)
+scale = Vector2(0.0275, 0.0275)
+texture = ExtResource("3_eoo52")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 344.0
+offset_top = 16.0
+offset_right = 552.0
+offset_bottom = 24.0
+show_percentage = false
+
+[connection signal="pressed" from="Buttons/Stop" to="." method="_on_stop_pressed"]
+[connection signal="pressed" from="Buttons/PlayPause" to="." method="_on_play_pause_pressed"]

@@ -10,11 +10,12 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	
-	#add_song is 'p'. I use it to test the UI for multiple songs playing at once.
+	#add_song key is 'p'. I use it to test the UI for multiple songs playing at once.
 	if(Input.is_action_just_pressed("add_song")):
 		var new_media_player : Media_Control = media_player.instantiate() as Media_Control
-		new_media_player.position.y =ambiance_player_container.get_child_count() * -48
-		print(ambiance_player_container.get_child_count() * 48)
+		new_media_player.position.y =ambiance_player_container.get_child_count() * 10
+		print(ambiance_player_container.get_child_count() * 10)
+		print(ambiance_player_container.get_child_count())
 		ambiance_player_container.add_child(new_media_player)
