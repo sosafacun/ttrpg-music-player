@@ -15,3 +15,12 @@ It will allow multiple background noises at once so you can have, for example, h
 
 ## What I don't know how to do
 - Support drag and drop youtube links
+
+
+## Resources
+
+- [Play button icon](https://www.svgrepo.com/svg/438139/multimedia-play-icon)
+- [Pause button icon](https://www.svgrepo.com/svg/438149/multimedia-pause-icon)
+- [Stop button icon](https://www.svgrepo.com/svg/438158/multimedia-stop-icon)
+- [Volume button icon](https://www.svgrepo.com/svg/438114/multimedia-audio-music-sound-max-speaker-volume-icon)
+- [Mute button icon](https://www.svgrepo.com/svg/438106/multimedia-audio-music-off-sound-off-speaker-disable-volume-icon)
